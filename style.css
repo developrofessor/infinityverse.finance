@@ -47,6 +47,10 @@ body {
     /* line-height: 100px; */
 }
 
+.documents .content {
+    font-size: 16pt;
+}
+
 .container .title {
     float: left;
 }
@@ -86,6 +90,24 @@ body {
 a {
     color: unset;
     text-decoration: none;
+}
+
+.credit {
+    /* color: #FFF; */
+    text-align: center;
+    padding: 20px;
+    font-size: 10pt;
+}
+
+.credit a {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #6657D7FF;
+    padding: 5px;
+}
+
+.credit a:hover {
+    text-decoration: underline;
 }
 
 .container .timer {
