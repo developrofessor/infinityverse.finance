@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="title">
+                <div class="a">Verse Token Presale</div>
+                <div class="b">Limited Supply Available</div>
+            </div>
+            <div class="social-icons">
+                <div class="icon">
+                    <a href="https://discord.gg/Rt4eheWp" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://t.me/versetokenpresale" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="timer">00:00:00</div>
+            <button class="btn" disabled>Buy now</button>
+        </div>
+        <div class="read-more-area">
+            Read More
+            <div class="arrow-down"></div>
+        </div>
+    </div>
+    <div class="documents">
+        <div class="back-section">
+            <div class="arrow-up"></div>
+            Back
+        </div>
+        <h2><span class="verse-small"></span> Verse Token</h2>
+        - Total Supply = 5 million<br />
+        - 100K verse TOKEN'S IN PRESALE WILL BE A RATIO of 1:1. PRESALE PRICE = $1 PER VERSE TOKEN. Presale Holders will gain early access to the farm and the physical shop.<br/>
+        - 10% locked supply for 4 months totaling 500k verse tokens. Once the 4 months has passed from the initial launch, 50k verse tokens will be burned and 50k verse tokens will be airdropped. 5,000 verse tokens will be given to OG holders of the Infinity Stoners collection. 5,000 verse tokens will be given to OG holders of the Infinity Citizens collection. 20,000 verse tokens will be airdropped to the whole community. 4,000 verse tokens will be airdropped to the first 8 holders of the comic book NFTs. 16,000 verse tokens will be given overtime in portions to participents in the community chats.<br />
+        - NFTs will be available at launch for all users.<br />
+        - Fee free/tax free token.<br />
+        - 0% farm.<br />
+        - A portion of the proceedings from the physical shop will be used as a buy back mechanism.<br />
+        - 400k verse tokens will be divided between the founders, co-founders, alliances and the community.<br />
+        <br />
+        <u>Marketplace features:</u><br /> 
+        - Farm<br />
+        - NFTs<br />
+        - Physical Item Shop and more.<br />
+        <br/>
+        Platform launch date: 12/20/2021<br />
+        NFT launch date: 12/20/2021<br />
+        Farm launch date: 12/20/2021<br />
+        <br />
+        The VERSE TOKEN can be used on the INFINITY VERSE platform.<br />
+        <br />
+        <u>FUTURE DEVELOPING</u>
+        - Prority 1: Dex<br />
+        - Priority 2: Game<br />
+        - Priority 3: 3D Verse<br />
+        - Priority 4: Bridge<br />
+        <br />
+        100% of the proceedings that will be gathered from the prelaunch event will be invested towards improving the project.
+    </div>
+    <script>
+        const readMoreBtn = document.querySelector('.read-more-area');
+        const backBtn = document.querySelector('.back-section');
+        readMoreBtn.addEventListener('click', () => {
+            const container = document.querySelector('.container');
+            const documents = document.querySelector('.documents');
+            documents.style.display = 'block';
+            requestAnimationFrame(function scroll() {
+                if (document.body.scrollTop <= documents.offsetHeight - 1) {
+                    document.body.scrollTop += (window.innerHeight + 10 - document.body.scrollTop) / 8;
+                    requestAnimationFrame(scroll);
+                } else
+                    container.style.display = 'none';
+            });
+        });
+        backBtn.addEventListener('click', () => {
+            const container = document.querySelector('.container');
+            const documents = document.querySelector('.documents');
+            container.style.display = 'flex';
+            document.body.scrollTop = window.innerHeight;
+            requestAnimationFrame(function scroll() {
+                if (document.body.scrollTop > 0) {
+                    document.body.scrollTop -= (document.body.scrollTop) / 8;
+                    requestAnimationFrame(scroll);
+                } else
+                    documents.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Philosopher', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: linear-gradient(#E871F2BB, #6657D7FF), url(/images/verse-coin-dark.png), url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center, 90% 20%, center center;
+    background-size: cover, 50vmin, cover;
+}
+
+.documents {
+    height: 100%;
+    display: none;
+    overflow: auto;
+    padding: 0 2vmin;
+    background-image: linear-gradient(#FFF, #f8adffde), url(/images/verse-big.png);
+    /* background-blend-mode: normal, overlay; */
+    /* background-origin: padding-box; */
+    background-attachment: scroll;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* padding-right: 30%; */
+}
+
+.documents h2 {
+    text-align: center;
+    font-size: 30pt;
+    background-image: linear-gradient(#E871F2, #6657D7);
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .title {
+    float: left;
+}
+
+.container .title .a {
+    font-size: 10vmin;
+    color: #FFF;
+    text-shadow: 0 .2pc #0005;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 2vmin;
+    padding-left: 3vmin;
+}
+
+.container .title .b {
+    font-size: 7vmin;
+    color: #FFF;
+    text-shadow: 0 .2pc #0005;
+    text-align: left;
+    padding-left: 3vmin;
+
+}
+
+.container .social-icons {
+    float: right;
+    padding: 10pt;
+}
+
+.container .social-icons .icon {
+    color: #FFF;
+    text-shadow: 0 .2pc #0005;
+    font-size: 30pt;
+    padding: 5pt;
+    display: inline-block;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.container .timer {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 .2pc #0005;
+    font-size: 20vmin;
+    font-weight: bold;
+}
+
+.container .btn {
+    font-family: 'Philosopher', sans-serif;
+    background-color: #ffad60;
+    border: none;
+    padding: 10pt;
+    border-radius: 15pt;
+    font-size: 27pt;
+    font-weight: bold;
+    color: #FFF;
+    box-shadow: 0 .2pc #0005;
+    transition: opacity 1s, filter 1s, transform 1s;
+    cursor: pointer;
+}
+
+.container .btn:disabled {
+    opacity: 0.3;
+    filter: grayscale(100%) blur(2px);
+    transform: scale(0.9);
+    cursor: default;
+}
+
+.read-more-area {
+    background-color: #FFF;
+    padding: 2vmin;
+    border-radius: 100% 100% 0 0;
+    box-shadow: 0 -5vmin 5vmin 3vmin #FFF;
+    font-size: 8vmin;
+    color: #AAA;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-section {
+    padding: 2vmin;
+    text-align: center;
+    font-size: 15pt;
+    color: #E871F2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.arrow-down,
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/arrow-down-icon.png);
+    margin: 0 auto;
+    animation: flying .5s alternate infinite;
+}
+
+.arrow-up {
+    transform: scale(-1);
+}
+
+.verse-small {
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/verse-small.png);
+    display: inline-block;
+}
+
+@keyframes flying {
+    to {
+        background-position: 0 -5px;
+    }
+}
