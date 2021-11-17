@@ -2,12 +2,9 @@
 
 body {
     margin: 0;
-    height: 100%;
-    width: 100%;
-    width: 100vw;
-    height: 100vh;
     font-family: 'Philosopher', sans-serif;
     overflow: hidden;
+    background-color: #333;
 }
 
 .container {
@@ -15,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(#E871F2BB, #6657D7FF), url(/images/verse-coin-dark.png), url(/images/background.jpg);
     background-repeat: no-repeat;
     background-position: center center, 90% 20%, center center;
