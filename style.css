@@ -116,6 +116,7 @@ a {
     text-shadow: 0 .2pc #0005;
     font-size: 20vmin;
     font-weight: bold;
+    transition: opacity 1s, transform 1s;
 }
 
 .container .btn {
@@ -135,7 +136,7 @@ a {
 .container .btn:disabled {
     opacity: 0.3;
     filter: grayscale(100%) blur(2px);
-    transform: scale(0.9);
+    transform: scale(0.85);
     cursor: default;
 }
 
