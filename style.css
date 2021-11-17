@@ -27,7 +27,8 @@ body {
     display: none;
     overflow: auto;
     padding: 0 2vmin;
-    background-image: linear-gradient(#FFF, #f8adffde), url(/images/verse-big.png);
+    background-image: linear-gradient(#54478a 0%, #333 15%, #333d 100%), url(/images/verse-big.png);
+    background-color: #333;
     /* background-blend-mode: normal, overlay; */
     /* background-origin: padding-box; */
     background-attachment: scroll;
@@ -49,6 +50,7 @@ body {
 
 .documents .content {
     font-size: 16pt;
+    color: #CCC;
 }
 
 .container .title {
@@ -93,7 +95,7 @@ a {
 }
 
 .credit {
-    /* color: #FFF; */
+    color: #FFF;
     text-align: center;
     padding: 20px;
     font-size: 10pt;
@@ -141,29 +143,37 @@ a {
 }
 
 .read-more-area {
-    background-color: #FFF;
+    /* background-color: #333; */
     padding: 2vmin;
-    border-radius: 100% 100% 0 0;
-    box-shadow: 0 -5vmin 5vmin 3vmin #FFF;
-    font-size: 8vmin;
-    color: #AAA;
+    /* border-radius: 100% 100% 0 0; */
+    /* box-shadow: 0 -5vmin 5vmin 3vmin #333; */
+    font-size: 1vmax;
+    color: #FFF;
     font-weight: bold;
     cursor: pointer;
+    background-image: linear-gradient(transparent 0%, #54478a 100%);
+}
+
+.read-more-area .text {
+    border: 2px solid #FFF;
+    padding: .4vmax 1vmax;
+    display: inline-block;
+    border-radius: 100vmin;
 }
 
 .back-section {
     padding: 2vmin;
     text-align: center;
     font-size: 15pt;
-    color: #E871F2;
+    color: #FFF;
     font-weight: bold;
     cursor: pointer;
 }
 
 .arrow-down,
 .arrow-up {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-image: url(/images/arrow-down-icon.png);
     margin: 0 auto;
     animation: flying .5s alternate infinite;
