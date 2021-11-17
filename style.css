@@ -116,7 +116,7 @@ a {
     text-align: center;
     color: #FFF;
     text-shadow: 0 .2pc #0005;
-    font-size: 20vmin;
+    font-size: 18vmin;
     font-weight: bold;
     transition: opacity 1s, transform 1s;
 }
@@ -147,7 +147,7 @@ a {
     padding: 2vmin;
     /* border-radius: 100% 100% 0 0; */
     /* box-shadow: 0 -5vmin 5vmin 3vmin #333; */
-    font-size: 1vmax;
+    font-size: 20px;
     color: #FFF;
     font-weight: bold;
     cursor: pointer;
@@ -156,9 +156,9 @@ a {
 
 .read-more-area .text {
     border: 2px solid #FFF;
-    padding: .4vmax 1vmax;
+    padding: 10px 20px;
     display: inline-block;
-    border-radius: 100vmin;
+    border-radius: 100px;
 }
 
 .back-section {
