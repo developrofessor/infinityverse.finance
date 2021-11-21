@@ -1,21 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Infinity Verse Token - Presale",
+  "name": "Infinity Verse Token - Presale",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "verse-small.png",
+      "sizes": "30x30",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "verse-small.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "30x30"
     },
     {
-      "src": "logo512.png",
+      "src": "verse-big.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "100x100"
     }
   ],
   "start_url": ".",
