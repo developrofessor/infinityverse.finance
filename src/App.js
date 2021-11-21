@@ -39,7 +39,7 @@ function App() {
               - 10% locked supply for 4 months totaling 500k verse tokens. Once the 4 months has passed from the initial launch, 50k verse tokens will be burned and 50k verse tokens will be airdropped. 5,000 verse tokens will be given to OG holders of the Infinity Stoners collection. 5,000 verse tokens will be given to OG holders of the Infinity Citizens collection. 20,000 verse tokens will be airdropped to the whole community. 4,000 verse tokens will be airdropped to the first 8 holders of the comic book NFTs. 16,000 verse tokens will be given overtime in portions to participents in the community chats.<br />
               - NFTs will be available at launch for all users.<br />
               - Fee free/tax free token.<br />
-              - 0% farm.<br />
+              - 0% farm deposit fee.<br />
               - A portion of the proceedings from the physical shop will be used as a buy back mechanism.<br />
               - 400k verse tokens will be divided between the founders, co-founders, alliances and the community.<br />
               <br />
