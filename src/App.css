@@ -5,6 +5,11 @@ body {
     font-family: 'Philosopher', sans-serif;
     overflow: hidden;
     background-color: #333;
+    height: 100%;
+}
+
+html, #root, .main {
+    height: 100%;
 }
 
 .container {
@@ -13,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background-image: linear-gradient(#E871F2BB, #6657D7FF), url(/images/verse-coin-dark.png), url(/images/background.jpg);
+    background-image: linear-gradient(#E871F2BB, #6657D7FF), url(images/verse-coin-dark.png), url(./images/background.jpg);
     background-repeat: no-repeat;
     background-position: center center, 90% 20%, center center;
     background-size: cover, 50vmin, cover;
@@ -24,7 +29,7 @@ body {
     display: none;
     overflow: auto;
     padding: 0 2vmin;
-    background-image: linear-gradient(#54478a 0%, #333 15%, #333d 100%), url(/images/verse-big.png);
+    background-image: linear-gradient(#54478a 0%, #333 15%, #333d 100%), url(./images/verse-big.png);
     background-color: #333;
     /* background-blend-mode: normal, overlay; */
     /* background-origin: padding-box; */
@@ -171,7 +176,7 @@ a {
 .arrow-up {
     width: 30px;
     height: 30px;
-    background-image: url(/images/arrow-down-icon.png);
+    background-image: url(./images/arrow-down-icon.png);
     margin: 0 auto;
     animation: flying .5s alternate infinite;
 }
@@ -183,14 +188,14 @@ a {
 .verse-small {
     width: 30px;
     height: 30px;
-    background-image: url(/images/verse-small.png);
+    background-image: url(./images/verse-small.png);
     display: inline-block;
 }
 
 .verse-medium {
     width: 45px;
     height: 45px;
-    background-image: url(/images/verse-big.png);
+    background-image: url(./images/verse-big.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
