@@ -123,7 +123,7 @@ a {
     transition: opacity 1s, transform 1s;
 }
 
-.container .btn {
+ .btn {
     font-family: 'Philosopher', sans-serif;
     background-color: #ffad60;
     border: none;
@@ -208,9 +208,24 @@ a {
 .verse-medium.dark {
     background-color: #333;
 }
-
+/* .modal {
+    position: relative;
+    top: 300px;
+    left: 40%;
+    text-align: center;
+    width: 40%;
+    height: 200px;
+    background-color: white;
+} */
+/* .css-79ws1d-MuiModal-root {
+    position: fixed;
+    z-index: 1300;
+    top: calc(50%-100px)!important;
+    left: auto;
+} */
 @keyframes flying {
     to {
         background-position: 0 -5px;
     }
 }
+
