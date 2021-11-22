@@ -166,13 +166,13 @@ function App() {
                 </div>
                 <div>
                     {/* <div className="timer">00:00:00</div> */}
-                    <button
+                    {/* <button
                         className="btn"
                         id="buy"
                         onClick={() => setOpen(true)}
                     >
                         Buy now
-                    </button>
+                    </button> */}
                 </div>
                 <div className="read-more-area">
                     <span className="text">Read More</span>
@@ -264,7 +264,6 @@ function App() {
                     </a>
                 </div>
             </div>
-            <Button onClick={() => setOpen(true)}>Open modal</Button>
             <Modal
                 open={open}
                 onClose={() => setOpen(false)}
