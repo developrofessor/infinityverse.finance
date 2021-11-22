@@ -67,17 +67,17 @@
             let seconds = timeLeft.getUTCSeconds();
             seconds = seconds <= 9 ? '0' + seconds : seconds;
 
-            timer.innerHTML = dayNum + ':' + hours + ':' + minutes + ':' + seconds;
+            // timer.innerHTML = dayNum + ':' + hours + ':' + minutes + ':' + seconds;
             if (distance > 0)
                 requestAnimationFrame(countdown);
             else {
-                const buyBtn = document.querySelector('#buy');
-                buyBtn.removeAttribute('disabled');
-                buyBtn.addEventListener('click', () => {
-                    // window.location.href = 'https://traderjoexyz.com/#/trade';
-                });
-                timer.style.opacity = 0.5;
-                timer.style.transform = 'scale(0.85)';
+                // const buyBtn = document.querySelector('#buy');
+                // buyBtn.removeAttribute('disabled');
+                // buyBtn.addEventListener('click', () => {
+                //     // window.location.href = 'https://traderjoexyz.com/#/trade';
+                // });
+                // timer.style.opacity = 0.5;
+                // timer.style.transform = 'scale(0.85)';
             }    
         });
     });
