@@ -96,6 +96,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .credit {
     color: #FFF;
     text-align: center;
@@ -135,6 +139,19 @@ a {
     box-shadow: 0 .2pc #0005;
     transition: opacity 1s, filter 1s, transform 1s;
     cursor: pointer;
+}
+
+.btn-regular {
+    font-family: 'Philosopher', sans-serif;
+    background-color: #ffad60;
+    border: none;
+    padding: 7pt 15pt;
+    border-radius: 100vmin;
+    font-size: 17pt;
+    font-weight: bold;
+    box-shadow: 0 .2pc 1pc #0002;
+    cursor: pointer;
+    color: #FFF;
 }
 
 .container .btn:disabled {
@@ -223,6 +240,17 @@ a {
     top: calc(50%-100px)!important;
     left: auto;
 } */
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 5vmin;
+    padding: 32px;
+}
 @keyframes flying {
     to {
         background-position: 0 -5px;

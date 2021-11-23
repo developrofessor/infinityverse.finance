@@ -13,20 +13,9 @@ import saleCont from "./ABI/saleCont.json";
 const USDCAddr = "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664";
 const saleAddr = "0xe7aFed763350494A40Baa05D66e729EDb7ae2FaF";
 
-const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
-};
-
 function App() {
     const [open, setOpen] = useState(false);
+    const [contract, showContract] = useState(false);
     const [saleAmount, setSaleAmount] = useState(0);
 
     useEffect(() => {
@@ -162,6 +151,13 @@ function App() {
                                 <i className="fab fa-telegram"></i>
                             </a>
                         </div>
+                        <div className="icon" onClick={() => showContract(true)}>
+                            <a
+                                href='javascript:void(0)'
+                            >
+                                <i class="fas fa-file-contract"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -272,7 +268,7 @@ function App() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style} style={{ textAlign: "center" }}>
+                <Box className="popup" style={{ textAlign: "center" }}>
                     1 VRSE = 1 USDC.e<br />
                     <TextField
                         id="filled-basic"
@@ -287,13 +283,24 @@ function App() {
                     <br />
                     <br />
                     <br />
-                    <Button
-                        variant="contained"
+                    <button
+                        className="btn-regular"
                         onClick={() => saleVerse()}
-                        disableElevation
                     >
                         Buy Now
-                    </Button>
+                    </button>
+                </Box>
+            </Modal>
+            <Modal
+                open={contract}
+                onClose={() => showContract(false)}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box className="popup">
+                    <h2>Contracts</h2>
+                    <a href="https://snowtrace.io/token/0xabc6a451f9f8ddec2d4916c813d8f1065526897f"><i class="fas fa-file-contract"></i> Verse Token Contract</a><br />
+                    <a href="https://snowtrace.io/token/0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664"><i class="fas fa-file-contract"></i> USDC.e Token Contract</a>
                 </Box>
             </Modal>
         </div>
