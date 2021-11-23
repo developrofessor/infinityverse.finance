@@ -273,7 +273,7 @@ function App() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style} style={{ textAlign: "center" }}>
-                    1 VRSE = 1 USDC.e
+                    1 VRSE = 1 USDC.e<br />
                     <TextField
                         id="filled-basic"
                         label="Amount"
