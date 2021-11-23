@@ -115,7 +115,7 @@ function App() {
                         saleAmount
                     );
                     await saleCon.wait();
-                    alert("successfully buyed");
+                    alert("Successfully purchased!");
                 } else {
                     alert("Input amount of sale!");
                 }
@@ -132,7 +132,7 @@ function App() {
             }
         } catch (err) {
             console.log(err);
-            alert("insufficient money");
+            alert("Transaction failed");
         }
     };
     return (
@@ -275,7 +275,7 @@ function App() {
                 <Box sx={style} style={{ textAlign: "center" }}>
                     <TextField
                         id="filled-basic"
-                        label="Filled"
+                        label="Amount"
                         variant="filled"
                         type="number"
                         onChange={(e) => {
