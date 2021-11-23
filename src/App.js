@@ -166,13 +166,15 @@ function App() {
                 </div>
                 <div>
                     {/* <div className="timer">00:00:00</div> */}
-                    {/* <button
-                        className="btn"
-                        id="buy"
-                        onClick={() => setOpen(true)}
-                    >
-                        Buy now
-                    </button> */}
+                    {
+                        <button
+                            className="btn"
+                            id="buy"
+                            onClick={() => setOpen(true)}
+                        >
+                            Buy now
+                        </button>
+                    }
                 </div>
                 <div className="read-more-area">
                     <span className="text">Read More</span>
