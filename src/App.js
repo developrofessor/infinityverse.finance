@@ -19,7 +19,7 @@ function App() {
                     <div className="social-icons">
                         <div className="icon">
                             <a
-                                href="https://discord.gg/Rt4eheWp"
+                                href="https://discord.gg/5egkHVvzMg"
                                 rel="noreferrer"
                                 target="_blank"
                             >
