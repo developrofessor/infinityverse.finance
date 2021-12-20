@@ -1,129 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
-import TextField from "@mui/material/TextField";
-import { ethers } from "ethers";
-import Web3 from "web3";
-import Web3Modal from "web3modal";
-
-import USDCCont from "./ABI/USDCCont.json";
-import saleCont from "./ABI/saleCont.json";
-const USDCAddr = "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664";
-const saleAddr = "0xe7aFed763350494A40Baa05D66e729EDb7ae2FaF";
 
 function App() {
     const [open, setOpen] = useState(false);
     const [contract, showContract] = useState(false);
     const [saleAmount, setSaleAmount] = useState(0);
 
-    useEffect(() => {
-        const web3 = new Web3(Web3.givenProvider);
-        async function initWallet() {
-            try {
-                const chainId = await web3.eth.getChainId();
-                console.log(chainId);
-                if (chainId === 43114) {
-                    const web3Modal = new Web3Modal();
-                    const connection = await web3Modal.connect();
-                    const provider = new ethers.providers.Web3Provider(
-                        connection
-                    );
-                    // const signer = provider.getSigner();
-                    // const myAddr = signer.provider.provider.selectedAddress;
-                    // alert("successfully connected!")
-                } else {
-                    try {
-                        await web3.currentProvider.request({
-                            method: "wallet_switchEthereumChain",
-                            params: [{ chainId: "0xA86A" }],
-                        });
-                    } catch (error) {
-                        if (error.code === 4902) {
-                            try {
-                                await web3.currentProvider.request({
-                                    method: "wallet_addEthereumChain",
-                                    params: [
-                                        {
-                                            chainId: "0xA86A",
-                                            chainName: "Avalanche Mainnet",
-                                            rpcUrls: [
-                                                "https://api.avax.network/ext/bc/C/rpc",
-                                            ],
-                                            blockExplorerUrls: [
-                                                "https://snowtrace.io",
-                                            ],
-                                        },
-                                    ],
-                                });
-                            } catch (error) {
-                                alert(error.message);
-                            }
-                        }
-                    }
-                }
-            } catch (err) {
-                console.log(err);
-                alert("add metamask");
-            }
-        }
-        initWallet();
-    }, []);
-    const saleVerse = async () => {
-        const web3 = new Web3(Web3.givenProvider);
-        let USDCContract;
-        let saleContract;
-        try {
-            const chainId = await web3.eth.getChainId();
-            if (chainId === 43114) {
-                const web3Modal = new Web3Modal();
-                const connection = await web3Modal.connect();
-                const provider = new ethers.providers.Web3Provider(connection);
-                const signer = provider.getSigner();
-                // const myAddr = signer.provider.provider.selectedAddress;
-                console.log(signer);
-                console.log(provider);
-                USDCContract = new ethers.Contract(
-                    USDCAddr,
-                    USDCCont.abi,
-                    signer
-                );
-                saleContract = new ethers.Contract(
-                    saleAddr,
-                    saleCont.abi,
-                    signer
-                );
-                if (saleAmount > 0) {
-                    const USDCCon = await USDCContract.approve(
-                        saleAddr,
-                        saleAmount * Math.pow(10, 6)
-                    );
-                    await USDCCon.wait();
-                    const saleCon = await saleContract.buyVerseToken(
-                        saleAmount
-                    );
-                    await saleCon.wait();
-                    alert("Successfully purchased!");
-                } else {
-                    alert("Input amount of sale!");
-                }
-            } else {
-                // alert('The wrong network, please switch to the Avalanche network.')
-                try {
-                    await web3.currentProvider.request({
-                        method: "wallet_switchEthereumChain",
-                        params: [{ chainId: "0xA86A" }],
-                    });
-                } catch (error) {
-                    alert(error.message);
-                }
-            }
-        } catch (err) {
-            console.log(err);
-            alert("Transaction failed");
-        }
-    };
     return (
         <div className="main">
             <div className="container">
@@ -166,7 +50,7 @@ function App() {
                         <button
                             className="btn"
                             id="buy"
-                            onClick={() => setOpen(true)}
+                            onClick={() => window.location.href='https://traderjoexyz.com/#/trade?inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0xdb4f2785b30143e4aee78a6c59276af1ee971044'}
                         >
                             Buy now
                         </button>
@@ -263,35 +147,6 @@ function App() {
                 </div>
             </div>
             <Modal
-                open={open}
-                onClose={() => setOpen(false)}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box className="popup" style={{ textAlign: "center" }}>
-                    1 VRSE = 1 USDC.e<br />
-                    <TextField
-                        id="filled-basic"
-                        label="Amount"
-                        variant="filled"
-                        type="number"
-                        onChange={(e) => {
-                            setSaleAmount(e.target.value);
-                            console.log(e.target.value);
-                        }}
-                    />
-                    <br />
-                    <br />
-                    <br />
-                    <button
-                        className="btn-regular"
-                        onClick={() => saleVerse()}
-                    >
-                        Buy Now
-                    </button>
-                </Box>
-            </Modal>
-            <Modal
                 open={contract}
                 onClose={() => showContract(false)}
                 aria-labelledby="modal-modal-title"
@@ -299,7 +154,7 @@ function App() {
             >
                 <Box className="popup">
                     <h2>Contracts</h2>
-                    <a href="https://snowtrace.io/token/0xabc6a451f9f8ddec2d4916c813d8f1065526897f"><i class="fas fa-file-contract"></i> Verse Token Contract</a><br />
+                    <a href="https://snowtrace.io/token/0xdb4f2785b30143e4aee78a6c59276af1ee971044"><i class="fas fa-file-contract"></i> Verse Token Contract</a><br />
                     <a href="https://snowtrace.io/token/0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664"><i class="fas fa-file-contract"></i> USDC.e Token Contract</a>
                 </Box>
             </Modal>
