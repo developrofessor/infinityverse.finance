@@ -13,8 +13,7 @@ function App() {
             <div className="container">
                 <div>
                     <div className="title">
-                        <div className="a">Verse Token Presale</div>
-                        <div className="b">Limited Supply Available</div>
+                        <div className="a">Verse Token</div>
                     </div>
                     <div className="social-icons">
                         <div className="icon">
@@ -35,10 +34,11 @@ function App() {
                                 <i className="fab fa-telegram"></i>
                             </a>
                         </div>
-                        <div className="icon" onClick={() => showContract(true)}>
-                            <a
-                                href='javascript:void(0)'
-                            >
+                        <div
+                            className="icon"
+                            onClick={() => showContract(true)}
+                        >
+                            <a href="javascript:void(0)">
                                 <i class="fas fa-file-contract"></i>
                             </a>
                         </div>
@@ -50,7 +50,10 @@ function App() {
                         <button
                             className="btn"
                             id="buy"
-                            onClick={() => window.location.href='https://traderjoexyz.com/#/trade?inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0xdb4f2785b30143e4aee78a6c59276af1ee971044'}
+                            onClick={() =>
+                                (window.location.href =
+                                    "https://traderjoexyz.com/#/trade?inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0xdb4f2785b30143e4aee78a6c59276af1ee971044")
+                            }
                         >
                             Buy now
                         </button>
@@ -154,8 +157,11 @@ function App() {
             >
                 <Box className="popup">
                     <h2>Contracts</h2>
-                    <a href="https://snowtrace.io/token/0xdb4f2785b30143e4aee78a6c59276af1ee971044"><i class="fas fa-file-contract"></i> Verse Token Contract</a><br />
-                    <a href="https://snowtrace.io/token/0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664"><i class="fas fa-file-contract"></i> USDC.e Token Contract</a>
+                    <a href="https://snowtrace.io/token/0xdb4f2785b30143e4aee78a6c59276af1ee971044">
+                        <i class="fas fa-file-contract"></i> Verse Token
+                        Contract
+                    </a>
+                    <br />
                 </Box>
             </Modal>
         </div>
